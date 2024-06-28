@@ -1,0 +1,49 @@
+<?php session_start();
+error_reporting(0);
+include_once('admin/includes/config.php');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+ <form class="forms-sample" method="post" enctype="multipart/form-data">
+                    
+                    <div class="form-group">
+                       <label for="exampleInputUsername1">Name of disability person</label>
+                      <input id="namesc" name="namesc" type="text" class="form-control" required="true" value="">
+                    </div>
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">Date of Birth</label>
+                     <input id="dob" name="dob" type="date" class="form-control" required="true" max="2023-01-01">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Contact Number</label>
+                     <input id="contnum" name="contnum" type="text" pattern="[0-9]+" maxlength="10" class="form-control" required="true" value="">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Communication Address</label>
+                     <textarea class="form-control" id="commadd" name="commadd" rows="5"></textarea>
+                     
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Profile Pic</label>
+                     <input id="propic" name="propic" type="file" class="form-control" required="true" value="">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Emergency Address</label>
+                    
+                     <textarea class="form-control" id="emeradd" name="emeradd" rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Emergency Contact Number</label>
+                     <input id="emercontnum" name="emercontnum" pattern="[0-9]+" maxlength="10" type="text" class="form-control" required="true" value="">
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2" name="submit">Submit</button>
+                  </form>
+</body>
+</html>
